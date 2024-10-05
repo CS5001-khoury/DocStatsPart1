@@ -114,21 +114,26 @@ While we provide tests, reminder, you should test your own code before submittin
    * word_lib - palindrome works on easy conditions
    * word_lib - count vowels works on easy conditions
    * word_lib - clean_word works on easy cases
-2. Approaching  (AG)
    * word_lib - palindrome works on edge cases
    * word_lib - count vowels works on edge cases
    * word_lib - clean_word works on edge cases
+2. Approaching  (AG)
    * doc_stats_builder - line_count works
    * doc_stats_builder - word_count works
-3. Meets  (AG)
    * doc_stats_builder - vowel_count works
    * doc_stats_builder - word palindromes works
    * doc_stats_builder - sentence palindromes works
-4. Exceeds  (MG)
-   * README.md questions answered
-   * Proper comments and docstrings throughout code
+   * Passes style checker
+3. Meets  (AG)
    * Uses Recursion for word_lib, and for-in loops for doc_stats_builder
-   * Test files provided / evidence of testing and running the program
+   * Evidence of testing and running the program
+     * Including adding additional examples in doctests than those provided
+   * Proper comments and docstrings throughout code 
+4. Exceeds  (MG)
+   * Report.md questions are all correct
+  
+   
+
   
 
 AG - Auto-graded  
@@ -145,26 +150,5 @@ For manually graded elements, we only guarantee time to submit for a regrade IF 
 * [Python Doctest](https://docs.python.org/3/library/doctest.html)
 * [Python Doctest Tutorial](https://pymotw.com/3/doctest/)
 * [Python Doctest Tutorial 2](https://realpython.com/python-doctest/)
-* [Getting Started with Git](https://docs.github.com/en/get-started/getting-started-with-git) - note: you can clone a repo without all the features of git, so don't worry so much on this just yet. 
-  
-### Using Git To Copy The Code
-
-Did you know it is possible to "clone" the entire git repository to your computer? This is a great way to get the code, and then you can use VS Code or PyCharm to edit the files.
-
-First you will need to make sure git is installed on your computer, though often the installs for VS Code and PyCharm adds their own git version. If for some reason they didn't, you can install git here: https://git-scm.com/downloads
-
-To clone using VS Code, open a new window and click "Clone Git Repository" and paste in the URL from the "Code" button on the [main page](../) of the repository. 
-
-![Code Button](code_button.png)
-
-The button to find the repository URL is the green code button. 
-
-![VS Code Clone Button](vscode_git.png)
-
-If you have VS Code, for PyCharm it is "GET FROM VCS" in the new project window.
-
-![VS Code Clone Dialog](vscode_repo_url.png)
-
-Just because the dialog is easy to  miss. 
-
-Doing this will copy the entire repo including instructions to your local machine! You will find there are multiple extensions you may want to install as you use them. Feel free to discuss them in teams Tips, Tricks, and Resources!
+* [Getting Started with Git](https://docs.github.com/en/get-started/getting-started-with-git) 
+ 
