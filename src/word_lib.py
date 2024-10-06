@@ -75,6 +75,7 @@ def clean_word(word: str) -> str:
     pass
 
 
+# Just running this file will run the doctests
 if __name__ == "__main__":  # if doctest is not installed, comment out these lines
     import doctest
 

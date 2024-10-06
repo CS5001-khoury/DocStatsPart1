@@ -4,20 +4,20 @@ For this homework you will be focusing on recursion and for loops. Additionally,
 
 ## Provided Code and Files
 For this assignment, there are four files provided to you.
-* [doc_stats.py](../doc_stats.py) - this is the main "driver" of the program. In fact, it's only purpose is to run this particular program. All code is provided, no need to edit. 
-* [doc_view.py](../doc_view.py) - this file contains all the interaction with the client (print and input). The "view" is often used in a lot of design paradigms, as the layer that interacts with the client. By containing your interaction to the view layer, it is easier to swap out the different modalities in which one interacts (console, websites, mobile apps, VR, etc) without having to modify the entire program. All code is provided, no need to edit.
-* [word_lib.py](../word_lib.py) - This file contains three functions that gives you information about a word. The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. While they can be implemented with loops, we are asking you to implement them recursively to practice recursion.
-* [doc_stats_builder.py](../doc_stats_builder.py) - This file contains the function that builds various statistics about a "document" (a documents is a list of text strings). The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. In this case, for-in loops are the best way to implement these functions, and we are encouraging you to use them to practice for-in loops. 
+* [doc_stats.py](../src/doc_stats.py) - this is the main "driver" of the program. In fact, it's only purpose is to run this particular program. All code is provided, no need to edit. 
+* [doc_view.py](../src/doc_view.py) - this file contains all the interaction with the client (print and input). The "view" is often used in a lot of design paradigms, as the layer that interacts with the client. By containing your interaction to the view layer, it is easier to swap out the different modalities in which one interacts (console, websites, mobile apps, VR, etc) without having to modify the entire program. All code is provided, no need to edit.
+* [word_lib.py](../src/word_lib.py) - This file contains three functions that gives you information about a word. The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. While they can be implemented with loops, we are asking you to implement them recursively to practice recursion.
+* [doc_stats_builder.py](../src/doc_stats_builder.py) - This file contains the function that builds various statistics about a "document" (a documents is a list of text strings). The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. In this case, for-in loops are the best way to implement these functions, and we are encouraging you to use them to practice for-in loops. 
 
 While it is optional, you may want to consider using Git to copy the code to your computer. See the [Resources](#using-git-to-copy-the-code) section for more information. Throughout the rest of the semester are going to build up to you using github, as that is the standard for later courses and the industry standard. Right now, it is optional! 
 
-> IMPORTANT  
+> [!IMPORTANT]  
 > Make sure to read through all the files. Looking at the imports, get a sense of how they all interact together. 
 > Ask questions on teams if you are unsure how the files interact together!
 
 # Part 1: word_lib.py
 
-👉🏽 **Task**: Implement the three functions in [word_lib.py](../word_lib.py) recursively.
+:fire: **Task**: Implement the three functions in [word_lib.py](../src/word_lib.py) **recursively**.
 
 The three functions listed in word_lib.py are about looking at a string (technically does not have to be a single word..). While each one can be implemented using a loops, we are asking you to implement them recursively. This is a case of practice makes perfect, and recursion is a topic that takes a lot of practice to get used to. Make sure to take a look at your Team Activity for the module and the provided code. We intentionally built in similar activities, so you can practice the same concepts in a different context.
 
@@ -27,7 +27,7 @@ The three functions listed in word_lib.py are about looking at a string (technic
 
 # Part 2: doc_stats_builder.py
 
-👉🏽 **Task**: Implement the three functions in [doc_stats_builder.py](../doc_stats_builder.py) using for-in loops.
+:fire: **Task**: Implement the three functions in [doc_stats_builder.py](../src/doc_stats_builder.py) using for-in loops.
 
 Each function in doc_stats_builder.py is about building a statistic about a document. If you read the doc_view.py file, you will notice a document is being built from a client typing multiple lines in a console. It then returns a tuple of strings, where each string is a line of the document. That means for each function, you can assume a document will look like this:
 
@@ -71,19 +71,19 @@ Aloha!
 World
 ```
 
-Hint: for some functions you are looking at lines, others you are looking at words within each line, so a nested loop may be needed.
+> [!TIP]
+> for some functions you are looking at lines, others you are looking at words within each line, so a nested loop may be needed.
 
-Hint2: Make use of your three functions you wrote in word_lib.py!
+> [!TIP]
+> Make use of your three functions you wrote in word_lib.py!
 
 ## Testing
-In general, you always want to test functions individually and then everything working together as a group (called interaction testing). You will notice, that in [doc_stats_builder.py](../doc_stats_builder.py) and [word_lib.py](../word_lib.py) there are docstring examples. These are examples of how the function should work. You can use these as a starting point for your testing. Also, if you have doctest installed, you can run the doctests in the docstrings just by executing the file. See the resources for doctest. However, the examples are not complete (they don't test edge cases). You should add additional examples to the docstrings to help you test your code.
+In general, you always want to test functions individually and then everything working together as a group (called interaction testing). You will notice, that in [doc_stats_builder.py](../src/doc_stats_builder.py) and [word_lib.py](../src/word_lib.py) there are docstring examples. These are examples of how the function should work. You can use these as a starting point for your testing. Also, if you have doctest installed (which it should be by default), you can run the doctests in the docstrings just by executing the file. See the resources for doctest. However, the examples are not complete (they don't test edge cases). You should add additional examples to the docstrings to help you test your code.
 
-For testing, you just have to provide documentation that you tested. This can be done in two ways:
+> [!CAUTION]
+> Don't forget to add edge cases to your docstring examples.
 
-1. Write your tests like you have in the past assignments adding the files to the project (for example, you create a file called word_lib_tests.py, and add tests in there).
-2. Update the examples, run doctest, and save the full output to a text file indicating your tests passed.
-
-Either way, you should submit your tests with your code. 
+For testing, you should make sure your docstrings are complete, and run doctests.
 
 ### Integration Testing
 Integration testing is testing how the functions work together. In this case, you can use the doc_stats.py file to test how the functions work together. This actually executes the program, which you can run with various examples,and then save the output of the runs to make sure they are working! 
@@ -91,24 +91,21 @@ Integration testing is testing how the functions work together. In this case, yo
 
 
 
-# Part 3: README.md
+## Report.md and README.md
 
-👉🏽 **Task**: Answer the questions in the [README.md](../README.md) file. 
+:fire: **Task**: Answer the questions in the [Report.md](../Report.md) and [README.md](../README.md) files.
 
-Make sure to answer the questions in the [README.md](../README.md) file.
+As always you are free to ask about the questions in MS Teams, including clarifications on the code.
 
-As always you are free to ask about the questions in MS Teams, including clarifications on the code. 
+## Coding Practice
+Looking at the coding [practice problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md) in the class resources, you should ideally do a few
+others on your own to get more practice coding.  However, you need to submit at least ONE (1)
+completed practice as its own python file (which means even if the coding practice had an online
+form to fill out like codingbat, you need to copy your solution to a python file).
 
 ## 📝 Grading Rubric
 
-For this assignment, you will submit:
-* word_lib.py
-* doc_stats_builder.py
-* README.md
-* Any test files you created including output captured from running the tests and your final program run.
-  * Basically, you are proving you tested it, and it works as expected! :) 
 
-While we provide tests, reminder, you should test your own code before submitting!
 
 1. Learning (AG)
    * word_lib - palindrome works on easy conditions
@@ -124,7 +121,7 @@ While we provide tests, reminder, you should test your own code before submittin
    * doc_stats_builder - word palindromes works
    * doc_stats_builder - sentence palindromes works
    * Passes style checker
-3. Meets  (AG)
+3. Meets  (MG)
    * Uses Recursion for word_lib, and for-in loops for doc_stats_builder
    * Evidence of testing and running the program
      * Including adding additional examples in doctests than those provided

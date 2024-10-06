@@ -129,6 +129,7 @@ def get_sentence_palindromes(lines: tuple) -> int:
     pass
 
 
+# just running the file will automatically run doctest 
 if __name__ == "__main__":  # if doctest is not installed, comment out these lines
     import doctest
 
