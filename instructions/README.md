@@ -127,10 +127,9 @@ form to fill out like codingbat, you need to copy your solution to a python file
    * Proper comments and docstrings throughout code 
 4. Exceeds  (MG)
    * Report.md questions are all correct
+   * Deeper thinking answered with some thought into the answer including data from experiment.
   
-   
-
-  
+     
 
 AG - Auto-graded  
 MG - Manually graded
