@@ -83,9 +83,9 @@ In general, you always want to test functions individually and then everything w
 > [!CAUTION]
 > Don't forget to add edge cases to your docstring examples.
 
-For testing, you should make sure your docstrings are complete, and run doctests.
+For testing, you should make sure your docstrings are complete, and run doctests. We are intentionally not providing an exact copy for the autograder, as eventually you will be in classes without autograders. You will need to think about how you can debug, or more importantly carefully think about the test cases you write to cover every case. 
 
-### Integration Testing
+### Integration Testing - Don't forget
 Integration testing is testing how the functions work together. In this case, you can use the doc_stats.py file to test how the functions work together. This actually executes the program, which you can run with various examples,and then save the output of the runs to make sure they are working! 
 
 
@@ -104,7 +104,6 @@ completed practice as its own python file (which means even if the coding practi
 form to fill out like codingbat, you need to copy your solution to a python file).
 
 ## 📝 Grading Rubric
-
 
 
 1. Learning (AG)
