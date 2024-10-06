@@ -66,6 +66,9 @@ def main():
     print("Fibonacci(20) =", time_function(fibonacci_recursive, 20))
     print("Fibonacci(30) =", time_function(fibonacci_recursive, 30))
 
+if __name__ == "__main__":
+    main()
+
 ```
 
 Report on your results here:
