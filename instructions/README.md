@@ -9,7 +9,6 @@ For this assignment, there are four files provided to you.
 * [word_lib.py](../src/word_lib.py) - This file contains three functions that gives you information about a word. The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. While they can be implemented with loops, we are asking you to implement them recursively to practice recursion.
 * [doc_stats_builder.py](../src/doc_stats_builder.py) - This file contains the function that builds various statistics about a "document" (a documents is a list of text strings). The function signatures (def, and docstring) are provided, but you will need to implement the function bodies. In this case, for-in loops are the best way to implement these functions, and we are encouraging you to use them to practice for-in loops. 
 
-While it is optional, you may want to consider using Git to copy the code to your computer. See the [Resources](#using-git-to-copy-the-code) section for more information. Throughout the rest of the semester are going to build up to you using github, as that is the standard for later courses and the industry standard. Right now, it is optional! 
 
 > [!IMPORTANT]  
 > Make sure to read through all the files. Looking at the imports, get a sense of how they all interact together. 
@@ -102,6 +101,103 @@ Looking at the coding [practice problems](https://github.com/CS5001-khoury/Resou
 others on your own to get more practice coding.  However, you need to submit at least ONE (1)
 completed practice as its own python file (which means even if the coding practice had an online
 form to fill out like codingbat, you need to copy your solution to a python file).
+
+## 🤖 Use of LLMs
+You should **not** use LLMs for writing your code. This is about learning the process, and without learning the process you may find it actually more difficult to generate code with LLMs. This is because the prompts for LLMs need to be exact, or they will make faulty assumptions about the code you are trying to generate (often generating incorrect test cases!). This is especially true, as you will want to practice recursion, so you can
+better understand it when it is used to traverse data structures. 
+
+You are free to use LLMs to help you think of edge cases  **after** you have a working function. An example prompt could be:
+
+> Please evaluate the following function focusing on these specific areas:
+>
+> 1. **Code correctness**: Does the implementation match the docstring description?
+> 2. **Docstring completeness**: Are the parameters, return value, and examples clear and accurate?
+> 3. **Edge cases**: What boundary conditions or unusual inputs could cause issues?
+>
+> Note that for this function, I am specifically required to use recursion. 
+> 
+> For any edge cases you identify:
+> - Explain why they're problematic
+> - Show what would happen with specific input examples
+> - Suggest how to handle them (documentation or code changes)
+>
+> Focus your feedback on the most important issues first. Assume this is for a beginner programming course. We have not covered error checking yet, 
+> nor should I include specialized statements for invalid input.
+>
+> [then paste in the single function you are looking at]
+
+Take out the line about recursion, for the functions that require for statements. 
+
+Here are some prompts that can help encourage learning.
+
+**Python Recursion Learning Prompt**
+> I am learning recursion in Python at a beginner level and finding it challenging to understand when and how to use recursive functions effectively. We're focusing on simple recursive problems that could also be solved with loops, as I'm just getting comfortable with the recursive thinking pattern. Can you explain recursion with clear examples, starting from the basic concept and building up gradually? Please focus on:
+>
+> - The fundamental structure of recursive functions (base case and recursive case)
+> - How the call stack works with recursion
+> - Common recursion patterns and when to use them
+> - How to trace through recursive function calls step-by-step
+> - Performance considerations and when recursion might not be the best choice
+>
+> After your explanation, I want you to enter quiz mode where you ask me questions ONE AT A TIME. Wait for my complete response before moving to the next question. 
+>
+> **Quiz structure - ask 4-5 questions total:**
+> 1. **Conceptual question**: Test my understanding of base cases, recursive cases, or how the call stack works
+> 2. **Code tracing question**: Give me a simple recursive function and ask me to trace through its execution step-by-step for a specific input
+> 3. **Code writing question**: Present a problem that can be solved recursively and ask me to write the function. Include hints about what the base case and recursive case should be
+> 4. **Analysis question**: Show me a recursive solution and ask me to identify potential issues (infinite recursion, inefficiency, etc.) or suggest improvements
+> 5. **Design choice question**: Present a problem that could be solved either recursively or iteratively, and ask me to compare the approaches
+>
+> **For my code writing responses, evaluate:**
+> - Correct identification and implementation of base case(s)
+> - Proper recursive case that moves toward the base case
+> - Correct function signature and return statements
+> - Clear variable names and logic flow
+> - Understanding of how the recursive solution compares to the equivalent loop-based approach
+>
+> **For analysis questions, guide me to consider:**
+> - Whether the recursion will terminate (no infinite loops)
+> - How the recursive approach compares to doing the same thing with a loop
+> - Basic efficiency concerns (stack depth for simple problems)
+> - When recursion makes the solution clearer vs. when a loop might be simpler
+>
+> Keep examples simple and beginner-friendly - things like calculating factorials, summing numbers in a range, or processing simple data structures. Be patient with my learning process and provide detailed feedback. If I make mistakes, explain not just what's wrong but why it's wrong and how to think about recursion more effectively. Help me understand the relationship between recursive solutions and their iterative equivalents.
+
+
+**Python For Loops with Strings and Lists Learning Prompt**  
+> I am learning for loops in Python, specifically focusing on how to use them effectively with strings and lists. I'm particularly interested in understanding how to split strings and process the resulting pieces, as well as how to iterate through lists and handle individual items. Can you explain for loops with practical examples that show:
+>
+> - Basic for loop syntax and structure with strings and lists
+> - How to use string splitting methods (.split(), .splitlines(), etc.) combined with for loops
+> - Different ways to iterate through lists (by item, by index, by both index and item)
+> - Common patterns for processing and transforming data as you loop
+> - How to handle edge cases like empty strings, empty lists, or unexpected data
+> - Practical string cleaning and list processing techniques using loops
+>
+> After your explanation, I want you to enter quiz mode where you ask me questions ONE AT A TIME. Wait for my complete response before moving to the next question.
+>
+> **Quiz structure - ask 4-5 questions total:**
+> 1. **Basic pattern question**: Test my understanding of for loop syntax and how iteration works with strings vs. lists
+> 2. **String splitting question**: Give me a string that needs to be split and processed, ask me to write a for loop solution
+> 3. **List processing question**: Present a list manipulation problem that requires iterating and transforming data
+> 4. **Combined challenge**: Give me a problem that involves both string splitting and list processing in the same solution
+> 5. **Code analysis question**: Show me a for loop with strings/lists and ask me to identify issues, improvements, or explain what it does
+>
+> **For my code writing responses, evaluate:**
+> - Correct for loop syntax and structure
+> - Appropriate choice of iteration method (by item vs. by index vs. enumerate)
+> - Proper use of string methods like .split(), .strip(), etc.
+> - Clear variable names that indicate what's being processed
+> - Handling of edge cases (empty inputs, whitespace, unexpected formats)
+> - Efficient use of Python's built-in methods and string/list operations
+>
+> **For analysis questions, guide me to consider:**
+> - Whether the loop handles all expected input scenarios
+> - If there are more efficient or Pythonic ways to accomplish the same task
+> - How the code would behave with edge cases like empty strings or lists
+> - Whether the variable names and structure make the code readable and maintainable
+>
+> Keep examples practical and relatable - things like processing user input, cleaning data from files, working with comma-separated values, or handling lists of names/numbers. Help me understand when to use different iteration patterns and how to combine string methods effectively with for loops.
 
 ## 📝 Grading Rubric
 
